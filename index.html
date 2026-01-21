@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Local Loop Hub | The Live Local Map</title>
+    <meta
+      name="description"
+      content="Local Loop Hub is the live, local map for needs, offers, and neighborhood info. Short posts. Real people. Real outcomes."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="glow" aria-hidden="true"></div>
+    <div class="grid" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="container nav">
+        <div class="logo">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <span class="logo-text">Local Loop Hub</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#map">Live map</a>
+          <a href="#how">How it works</a>
+          <a href="#loopplus">Loop+</a>
+          <a href="#waitlist" class="btn ghost">Join the waitlist</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="map">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="chip">Your neighborhood, alive right now</div>
+            <h1>Local moments. Real outcomes. No endless feed.</h1>
+            <p>
+              Local Loop Hub turns your city into a live map of needs, offers, and local info.
+              Posts expire automatically so what you see stays fresh, useful, and close.
+            </p>
+            <div class="cta-row">
+              <a class="btn primary" href="#waitlist">Get early access</a>
+              <a class="btn ghost" href="#loopplus">See Loop+ features</a>
+            </div>
+            <div class="meta">
+              <span>Short-lived posts</span>
+              <span>Hyper local</span>
+              <span>Real people</span>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="map-card">
+              <div class="map-grid" aria-hidden="true"></div>
+              <div class="pulse-ring"></div>
+              <div class="pulse-ring ring-two"></div>
+              <div class="pin pin-teal">
+                <span class="pin-label">Offer: moving boxes</span>
+              </div>
+              <div class="pin pin-amber">
+                <span class="pin-label">Need: jumper cables</span>
+              </div>
+              <div class="pin pin-coral">
+                <span class="pin-label">Info: pop-up market</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <h3>Built for urgency</h3>
+              <p>Time and distance shape every post so you can act fast when it matters.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how">
+        <div class="container">
+          <h2>How Local Loop Hub works</h2>
+          <div class="steps">
+            <article class="step">
+              <span>01</span>
+              <h4>Post a loop</h4>
+              <p>Share a need, offer, or local update in seconds.</p>
+            </article>
+            <article class="step">
+              <span>02</span>
+              <h4>Pin your area</h4>
+              <p>Set a distance radius so only nearby neighbors see it.</p>
+            </article>
+            <article class="step">
+              <span>03</span>
+              <h4>Chat and act</h4>
+              <p>Move into private chat to coordinate real-world help.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container">
+          <div class="split">
+            <div>
+              <h2>What you can do</h2>
+              <p>Everything in Local Loop Hub is built around time, distance, and usefulness.</p>
+            </div>
+            <div class="card-grid">
+              <div class="card">
+                <h3>Needs</h3>
+                <p>Ask for help and find someone nearby who can jump in fast.</p>
+              </div>
+              <div class="card">
+                <h3>Offers</h3>
+                <p>Share what you have, from tools to rides to local skills.</p>
+              </div>
+              <div class="card">
+                <h3>Local info</h3>
+                <p>Post what is happening right now so neighbors stay in the loop.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="loopplus">
+        <div class="container">
+          <div class="loopplus">
+            <div>
+              <div class="chip dark">Loop+ power tools</div>
+              <h2>Upgrade when you are ready for more.</h2>
+              <p>
+                Loop+ unlocks power-user tools for the people who post more, travel more, and help
+                more. You can always preview what is inside before you subscribe.
+              </p>
+            </div>
+            <div class="loopplus-grid">
+              <div class="loop-card">
+                <h3>More activity</h3>
+                <p>More active posts plus more daily posts and chats.</p>
+              </div>
+              <div class="loop-card">
+                <h3>Premium sections</h3>
+                <p>Unlock spaces like Hire, Boost, and Perks.</p>
+              </div>
+              <div class="loop-card">
+                <h3>Proximity alerts</h3>
+                <p>Get notified when something relevant is close.</p>
+              </div>
+              <div class="loop-card">
+                <h3>Map access</h3>
+                <p>Drop pins for offers and help with enhanced visibility.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta" id="waitlist">
+        <div class="container cta-card">
+          <div>
+            <h2>Be first when your neighborhood opens</h2>
+            <p>We are launching soon. Join the waitlist for early access and launch perks.</p>
+          </div>
+          <form class="waitlist-form" id="waitlist-form">
+            <input type="text" name="name" placeholder="Full name" required />
+            <input type="email" name="email" placeholder="Email address" required />
+            <input type="text" name="city" placeholder="City or neighborhood" required />
+            <button type="submit">Join the waitlist</button>
+            <span class="note status" id="waitlist-status"></span>
+          </form>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="download">
+            <h2>Launching on iOS and Android</h2>
+            <p>Follow along at www.localloophub.com and be the first to join your local loop.</p>
+            <a class="btn primary" href="#waitlist">Get early access</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="logo-text">Local Loop Hub</div>
+        <div class="footer-links">
+          <a href="mailto:support@localloophub.com">support@localloophub.com</a>
+          <span>Short posts. Local relevance. Real outcomes.</span>
+        </div>
+      </div>
+      <div class="footer-bottom">© Local Loop Hub</div>
+    </footer>
+
+    <script>
+      const SUPABASE_URL = "https://dezoixavgzhcjrxnkvyj.supabase.co";
+      const SUPABASE_ANON_KEY =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlhZ3RmcXRqcWZucmNmeHl5dnh6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg3OTQ5NjEsImV4cCI6MjA4NDM3MDk2MX0.no9o7ROcgS3XlWDPMzFdkwKYbHJAY0rW18wZ8jb_kig";
+      const WAITLIST_TABLE = "waitlist_signups";
+
+      const form = document.getElementById("waitlist-form");
+      const status = document.getElementById("waitlist-status");
+      const submitBtn = form.querySelector("button[type=\"submit\"]");
+
+      async function submitWaitlist(payload) {
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/${WAITLIST_TABLE}`, {
+          method: "POST",
+          headers: {
+            apikey: SUPABASE_ANON_KEY,
+            Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+            "Content-Type": "application/json",
+            Prefer: "return=representation",
+          },
+          body: JSON.stringify(payload),
+        });
+
+        if (!response.ok) {
+          const errorText = await response.text();
+          throw new Error(errorText || "Unable to submit right now.");
+        }
+
+        return response.json();
+      }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        status.textContent = "";
+        status.classList.remove("is-error");
+
+        const data = new FormData(form);
+        const payload = {
+          name: data.get("name"),
+          email: data.get("email"),
+          city: data.get("city"),
+          source: "marketing_site",
+        };
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Joining...";
+
+        try {
+          await submitWaitlist(payload);
+          status.textContent = `Thanks, ${payload.name}! You are on the list.`;
+          form.reset();
+        } catch (error) {
+          status.textContent = "Something went wrong. Please try again.";
+          status.classList.add("is-error");
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Join the waitlist";
+        }
+      });
+    </script>
+  </body>
+</html>
