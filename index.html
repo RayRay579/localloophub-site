@@ -197,9 +197,9 @@
             <p>Join the waitlist for early access and launch perks.</p>
           </div>
           <form class="waitlist-form" id="waitlist-form">
-            <input type="text" name="name" placeholder="Full name" required />
-            <input type="email" name="email" placeholder="Email address" required />
-            <input type="text" name="city" placeholder="City or neighborhood" required />
+            <input type="text" name="name" placeholder="Full name" autocomplete="name" required />
+            <input type="email" name="email" placeholder="Email address" autocomplete="email" required />
+            <input type="text" name="city" placeholder="City or neighborhood" autocomplete="address-level2" required />
             <button type="submit">Join the waitlist</button>
             <span class="note status" id="waitlist-status"></span>
           </form>
