@@ -3,77 +3,95 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Local Loop Hub | The Live Local Map</title>
+    <title>Local Loop Hub | Your Neighborhood, Live</title>
     <meta
       name="description"
-      content="Local Loop Hub is the live, local map for needs, offers, and neighborhood info. Short posts. Real people. Real outcomes."
+      content="Local Loop Hub is a live local map for needs, offers, and neighborhood info. Short posts. Real people. Real outcomes."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Sora:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="glow" aria-hidden="true"></div>
-    <div class="grid" aria-hidden="true"></div>
+    <div class="atmosphere" aria-hidden="true">
+      <span class="orb orb-one"></span>
+      <span class="orb orb-two"></span>
+      <span class="orb orb-three"></span>
+      <span class="grid"></span>
+      <span class="noise"></span>
+    </div>
 
     <header class="topbar">
       <div class="container nav">
-        <div class="logo">
-          <span class="logo-mark" aria-hidden="true"></span>
-          <span class="logo-text">Local Loop Hub</span>
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <div class="brand-name">Local Loop Hub</div>
+            <div class="brand-tag">Live local map</div>
+          </div>
         </div>
         <nav class="nav-links">
-          <a href="#map">Live map</a>
           <a href="#how">How it works</a>
+          <a href="#features">Features</a>
           <a href="#loopplus">Loop+</a>
-          <a href="#waitlist" class="btn ghost">Join the waitlist</a>
+          <a class="btn ghost" href="#waitlist">Join the waitlist</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="hero" id="map">
+      <section class="hero" id="top">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <div class="chip">Your neighborhood, alive right now</div>
-            <h1>Local moments. Real outcomes. No endless feed.</h1>
+            <span class="eyebrow">Your neighborhood, alive right now</span>
+            <h1>Turn your block into a live loop of help, offers, and info.</h1>
             <p>
-              Local Loop Hub turns your city into a live map of needs, offers, and local info.
-              Posts expire automatically so what you see stays fresh, useful, and close.
+              Local Loop Hub is a map-first community app built around time and distance.
+              Posts expire automatically so your feed stays fresh, useful, and close.
             </p>
             <div class="cta-row">
               <a class="btn primary" href="#waitlist">Get early access</a>
-              <a class="btn ghost" href="#loopplus">See Loop+ features</a>
+              <a class="btn ghost" href="#loopplus">See Loop+ tools</a>
             </div>
-            <div class="meta">
+            <div class="signal-row">
               <span>Short-lived posts</span>
               <span>Hyper local</span>
               <span>Real people</span>
+              <span>No endless feed</span>
             </div>
           </div>
 
           <div class="hero-visual">
-            <div class="map-card">
-              <div class="map-grid" aria-hidden="true"></div>
-              <div class="pulse-ring"></div>
-              <div class="pulse-ring ring-two"></div>
-              <div class="pin pin-teal">
+            <div class="map-shell">
+              <div class="map-layer"></div>
+              <div class="radar">
+                <span class="ring ring-one"></span>
+                <span class="ring ring-two"></span>
+                <span class="ring ring-three"></span>
+              </div>
+              <div class="pin pin-lime">
                 <span class="pin-label">Offer: moving boxes</span>
               </div>
-              <div class="pin pin-amber">
+              <div class="pin pin-coral">
                 <span class="pin-label">Need: jumper cables</span>
               </div>
-              <div class="pin pin-coral">
-                <span class="pin-label">Info: pop-up market</span>
+              <div class="pin pin-sky">
+                <span class="pin-label">Info: farmers market</span>
               </div>
             </div>
-            <div class="stat-card">
-              <h3>Built for urgency</h3>
-              <p>Time and distance shape every post so you can act fast when it matters.</p>
+            <div class="hero-stack">
+              <div class="stack-card">
+                <h3>Live map access</h3>
+                <p>Drop pins for help, offers, and nearby info.</p>
+              </div>
+              <div class="stack-card dark">
+                <h3>Auto-expiring posts</h3>
+                <p>Everything you see is relevant to now, not last week.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -81,80 +99,92 @@
 
       <section class="section" id="how">
         <div class="container">
-          <h2>How Local Loop Hub works</h2>
+          <div class="section-head">
+            <h2>How Local Loop Hub works</h2>
+            <p>Fast, local, and built for moments that actually matter.</p>
+          </div>
           <div class="steps">
             <article class="step">
-              <span>01</span>
+              <span class="step-index">01</span>
               <h4>Post a loop</h4>
-              <p>Share a need, offer, or local update in seconds.</p>
+              <p>Need help? Offer something? Share a local update.</p>
             </article>
             <article class="step">
-              <span>02</span>
-              <h4>Pin your area</h4>
-              <p>Set a distance radius so only nearby neighbors see it.</p>
+              <span class="step-index">02</span>
+              <h4>Set your radius</h4>
+              <p>Keep it close with distance filters and time windows.</p>
             </article>
             <article class="step">
-              <span>03</span>
+              <span class="step-index">03</span>
               <h4>Chat and act</h4>
-              <p>Move into private chat to coordinate real-world help.</p>
+              <p>Move to private chat when you want to connect.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section alt">
-        <div class="container">
-          <div class="split">
-            <div>
-              <h2>What you can do</h2>
-              <p>Everything in Local Loop Hub is built around time, distance, and usefulness.</p>
+      <section class="section alt" id="features">
+        <div class="container split">
+          <div>
+            <h2>Built for urgency, not attention.</h2>
+            <p>
+              No endless feed. No viral pressure. Just real people near you,
+              sharing what is needed right now.
+            </p>
+            <div class="feature-list">
+              <div class="feature-chip">Needs, Offers, Info</div>
+              <div class="feature-chip">Map + Feed views</div>
+              <div class="feature-chip">Distance + time filters</div>
+              <div class="feature-chip">Private chat</div>
             </div>
-            <div class="card-grid">
-              <div class="card">
-                <h3>Needs</h3>
-                <p>Ask for help and find someone nearby who can jump in fast.</p>
-              </div>
-              <div class="card">
-                <h3>Offers</h3>
-                <p>Share what you have, from tools to rides to local skills.</p>
-              </div>
-              <div class="card">
-                <h3>Local info</h3>
-                <p>Post what is happening right now so neighbors stay in the loop.</p>
-              </div>
+          </div>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <h3>Local trust signals</h3>
+              <p>Follow people you trust and build your micro-community.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Fresh by design</h3>
+              <p>Posts expire, keeping the map clean and relevant.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Time-sensitive filters</h3>
+              <p>Zoom from 1 hour to 24 hours and focus fast.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Quiet by default</h3>
+              <p>Less noise, more outcomes. The map stays focused.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="loopplus">
-        <div class="container">
-          <div class="loopplus">
-            <div>
-              <div class="chip dark">Loop+ power tools</div>
-              <h2>Upgrade when you are ready for more.</h2>
-              <p>
-                Loop+ unlocks power-user tools for the people who post more, travel more, and help
-                more. You can always preview what is inside before you subscribe.
-              </p>
+      <section class="section loopplus" id="loopplus">
+        <div class="container loopplus-grid">
+          <div class="loopplus-copy">
+            <span class="eyebrow dark">Loop+ power tools</span>
+            <h2>Upgrade when you are ready to go deeper.</h2>
+            <p>
+              Loop+ gives power users more reach, more posts, and more ways to connect fast.
+              Preview everything before you subscribe.
+            </p>
+          </div>
+          <div class="loopplus-cards">
+            <div class="loopplus-card">
+              <h3>More activity</h3>
+              <p>More active posts, more daily posts and chats.</p>
             </div>
-            <div class="loopplus-grid">
-              <div class="loop-card">
-                <h3>More activity</h3>
-                <p>More active posts plus more daily posts and chats.</p>
-              </div>
-              <div class="loop-card">
-                <h3>Premium sections</h3>
-                <p>Unlock spaces like Hire, Boost, and Perks.</p>
-              </div>
-              <div class="loop-card">
-                <h3>Proximity alerts</h3>
-                <p>Get notified when something relevant is close.</p>
-              </div>
-              <div class="loop-card">
-                <h3>Map access</h3>
-                <p>Drop pins for offers and help with enhanced visibility.</p>
-              </div>
+            <div class="loopplus-card">
+              <h3>Premium sections</h3>
+              <p>Unlock spaces like Hire, Boost, and Perks.</p>
+            </div>
+            <div class="loopplus-card">
+              <h3>Proximity alerts</h3>
+              <p>Get notified when relevant loops are nearby.</p>
+            </div>
+            <div class="loopplus-card">
+              <h3>Map pin access</h3>
+              <p>Drop pins for offers and help with enhanced visibility.</p>
             </div>
           </div>
         </div>
@@ -163,8 +193,8 @@
       <section class="section cta" id="waitlist">
         <div class="container cta-card">
           <div>
-            <h2>Be first when your neighborhood opens</h2>
-            <p>We are launching soon. Join the waitlist for early access and launch perks.</p>
+            <h2>Be first when your neighborhood opens.</h2>
+            <p>Join the waitlist for early access and launch perks.</p>
           </div>
           <form class="waitlist-form" id="waitlist-form">
             <input type="text" name="name" placeholder="Full name" required />
@@ -180,7 +210,7 @@
         <div class="container">
           <div class="download">
             <h2>Launching on iOS and Android</h2>
-            <p>Follow along at www.localloophub.com and be the first to join your local loop.</p>
+            <p>Follow along at www.localloophub.com and be first in your loop.</p>
             <a class="btn primary" href="#waitlist">Get early access</a>
           </div>
         </div>
@@ -189,10 +219,11 @@
 
     <footer class="footer">
       <div class="container footer-grid">
-        <div class="logo-text">Local Loop Hub</div>
+        <div class="brand-name">Local Loop Hub</div>
         <div class="footer-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
           <a href="mailto:support@localloophub.com">support@localloophub.com</a>
-          <span>Short posts. Local relevance. Real outcomes.</span>
         </div>
       </div>
       <div class="footer-bottom">© Local Loop Hub</div>
