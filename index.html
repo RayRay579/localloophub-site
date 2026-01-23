@@ -200,6 +200,7 @@
             <input type="text" name="name" placeholder="Full name" autocomplete="name" required />
             <input type="email" name="email" placeholder="Email address" autocomplete="email" required />
             <input type="text" name="city" placeholder="City or neighborhood" autocomplete="address-level2" required />
+            <input type="text" name="company" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <button type="submit">Join the waitlist</button>
             <span class="note status" id="waitlist-status"></span>
           </form>
@@ -264,6 +265,11 @@
         status.classList.remove("is-error");
 
         const data = new FormData(form);
+        if ((data.get("company") || "").toString().trim().length > 0) {
+          status.textContent = "Thanks! You're on the list.";
+          form.reset();
+          return;
+        }
         const payload = {
           name: data.get("name"),
           email: data.get("email"),
