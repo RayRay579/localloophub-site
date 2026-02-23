@@ -196,14 +196,21 @@
             <h2>Be first when your neighborhood opens.</h2>
             <p>Join the waitlist for early access and launch perks.</p>
           </div>
-          <form class="waitlist-form" id="waitlist-form">
-            <input type="text" name="name" placeholder="Full name" autocomplete="name" required />
-            <input type="email" name="email" placeholder="Email address" autocomplete="email" required />
-            <input type="text" name="city" placeholder="City or neighborhood" autocomplete="address-level2" required />
+          <form
+            class="waitlist-form"
+            id="waitlist-form"
+            method="POST"
+            action="https://docs.google.com/forms/d/e/1FAIpQLScfyz2xRY_sJ6ArhxYe0iCeIh-PHJkh5DmiA4yQIfL0KyGrVw/formResponse"
+            target="hidden_iframe"
+          >
+            <input type="text" name="entry.1451722387" placeholder="Full name" autocomplete="name" required />
+            <input type="email" name="entry.1623435493" placeholder="Email address" autocomplete="email" required />
+            <input type="text" name="entry.273594453" placeholder="City or neighborhood" autocomplete="address-level2" required />
             <input type="text" name="company" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <button type="submit">Join the waitlist</button>
             <span class="note status" id="waitlist-status"></span>
           </form>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
         </div>
       </section>
 
@@ -231,36 +238,11 @@
     </footer>
 
     <script>
-      const SUPABASE_URL = "https://nramaegcpzaoykfwsejc.supabase.co";
-      const SUPABASE_ANON_KEY =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5yYW1hZWdjcHphb3lrZndzZWpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg0MTUyNjUsImV4cCI6MjA4Mzk5MTI2NX0.e1v8qWiBT9KGGn6fP6xan1GFlJLq5X-IvwYcXvk4zB0";
-      const WAITLIST_FN = "super-function";
-
       const form = document.getElementById("waitlist-form");
       const status = document.getElementById("waitlist-status");
       const submitBtn = form.querySelector("button[type=\"submit\"]");
 
-      async function submitWaitlist(payload) {
-        const response = await fetch(`${SUPABASE_URL}/functions/v1/${WAITLIST_FN}`, {
-          method: "POST",
-          headers: {
-            apikey: SUPABASE_ANON_KEY,
-            Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
-        });
-
-        if (!response.ok) {
-          const errorText = await response.text();
-          throw new Error(errorText || "Unable to submit right now.");
-        }
-
-        return response.json();
-      }
-
       form.addEventListener("submit", async (event) => {
-        event.preventDefault();
         status.textContent = "";
         status.classList.remove("is-error");
 
@@ -268,25 +250,17 @@
         if ((data.get("company") || "").toString().trim().length > 0) {
           status.textContent = "Thanks! You're on the list.";
           form.reset();
+          event.preventDefault();
           return;
         }
-        const payload = {
-          name: data.get("name"),
-          email: data.get("email"),
-          city: data.get("city"),
-          source: "marketing_site",
-        };
 
         submitBtn.disabled = true;
         submitBtn.textContent = "Joining...";
 
         try {
-          await submitWaitlist(payload);
-          status.textContent = `Thanks, ${payload.name}! You are on the list.`;
+          const name = (data.get("entry.1451722387") || "").toString().trim();
+          status.textContent = name ? `Thanks, ${name}! You are on the list.` : "Thanks! You're on the list.";
           form.reset();
-        } catch (error) {
-          status.textContent = "Something went wrong. Please try again.";
-          status.classList.add("is-error");
         } finally {
           submitBtn.disabled = false;
           submitBtn.textContent = "Join the waitlist";
