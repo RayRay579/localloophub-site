@@ -200,12 +200,12 @@
             class="waitlist-form"
             id="waitlist-form"
             method="POST"
-            action="https://docs.google.com/forms/d/e/1FAIpQLScfyz2xRY_sJ6ArhxYe0iCeIh-PHJkh5DmiA4yQIfL0KyGrVw/formResponse"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSe5s1503_ZSHijZGgU8FzRKZMQB_w-_cylhM31NO3xUks3kog/formResponse"
             target="hidden_iframe"
           >
-            <input type="text" name="entry.1451722387" placeholder="Full name" autocomplete="name" required />
-            <input type="email" name="entry.1623435493" placeholder="Email address" autocomplete="email" required />
-            <input type="text" name="entry.273594453" placeholder="City or neighborhood" autocomplete="address-level2" required />
+            <input type="text" name="entry.1343592604" placeholder="Full name" autocomplete="name" required />
+            <input type="email" name="entry.25757575" placeholder="Email address" autocomplete="email" required />
+            <input type="text" name="entry.776578374" placeholder="City or neighborhood" autocomplete="address-level2" required />
             <input type="text" name="company" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <button type="submit">Join the waitlist</button>
             <span class="note status" id="waitlist-status"></span>
@@ -258,7 +258,7 @@
         submitBtn.textContent = "Joining...";
 
         try {
-          const name = (data.get("entry.1451722387") || "").toString().trim();
+          const name = (data.get("entry.1343592604") || "").toString().trim();
           status.textContent = name ? `Thanks, ${name}! You are on the list.` : "Thanks! You're on the list.";
           form.reset();
         } finally {
