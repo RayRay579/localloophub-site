@@ -56,7 +56,8 @@
     ],
     "experiments": {
       "typedRoutes": true,
-      "reactCompiler": true
+      "reactCompiler": true,
+      "baseUrl": "/localloophub-site"
     },
     "updates": {
       "url": "https://u.expo.dev/914a2feb-6dcb-4a2f-afcc-d973f804d061"
